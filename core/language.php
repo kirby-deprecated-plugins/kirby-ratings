@@ -33,7 +33,7 @@ class LanguageSwitcherFrontend {
 	}
 }
 
-if( function_exists('panel') ) {
+if( function_exists('panel') && site()->user() ) {
 	new Ratings\LanguageSwitcherPanel();
 } else {
 	new Ratings\LanguageSwitcherFrontend();

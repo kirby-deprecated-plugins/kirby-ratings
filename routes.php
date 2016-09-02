@@ -10,8 +10,6 @@ kirby()->routes(array(
 			$post['value'] = get('value');
 			$post['secret'] = get('secret');
 
-			ratingReset($post);
-
 			Ratings\canVote( $post );
 			Ratings\isHuman( $post );
 			Ratings\isRating( $post );

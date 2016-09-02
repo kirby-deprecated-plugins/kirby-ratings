@@ -9,8 +9,6 @@ class Blacklist {
 		$this->id = $post['id'];
 		$this->filename = md5( $_SERVER['REMOTE_ADDR'] );
 
-		//$this->reset();
-
 		if( $this->createPage() ) {
 			$this->createFile();
 		}

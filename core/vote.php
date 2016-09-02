@@ -8,7 +8,6 @@ class Vote {
 	function __construct($post) {
 		$this->post = $post;
 		$this->page = page( $post['id'] );
-		$this->reset();
 		$this->add();
 	}
 

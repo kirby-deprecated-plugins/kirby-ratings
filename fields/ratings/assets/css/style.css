@@ -1,0 +1,24 @@
+.ratings {
+	background: #fff;
+	border: 2px solid #ddd;
+}
+
+.ratings-preview {
+	margin-bottom: .5em;
+}
+
+.ratings-info {
+	padding: 1em;
+}
+
+.ratings-delete {
+	display: flex;
+	align-items: center;
+	background: #fafafa;
+	padding: 1em;
+	border-top: 1px solid #ddd;
+}
+
+.ratings-delete >*:nth-child(1) {
+	margin-right: .5em;
+}

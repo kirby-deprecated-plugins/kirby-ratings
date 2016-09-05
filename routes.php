@@ -17,10 +17,10 @@ kirby()->routes(array(
 			}
 
 
-			//Ratings\isValidIP( $post );
-			//Ratings\canVote( $post );
-			//Ratings\isHuman( $post );
-			//Ratings\isRating( $post );
+			Ratings\isValidIP( $post );
+			Ratings\canVote( $post );
+			Ratings\isHuman( $post );
+			Ratings\isRating( $post );
 
 			new Ratings\Blacklist( $post );
 

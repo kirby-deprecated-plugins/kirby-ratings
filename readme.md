@@ -1,6 +1,6 @@
 # Kirby Ratings
 
-*Version 0.4*
+*Version 0.5*
 
 Ratings stars - Allow users to vote for pages.
 
@@ -66,16 +66,6 @@ Add the following code to your footer snippet:
 kirbyRatings.init('<?php echo u(); ?>');
 </script>
 ```
-
-**ratings-modal (optional)**
-
-You can also add a `go` argument if you don't want to go to the current page.
-
-```php
-<?php snippet('ratings-modal', array('go' => 'some/other/page')); ?>
-```
-
-To what page it should go after the rating has been added. If no value is set it will go to the page url.
 
 ## Usage
 
@@ -181,6 +171,11 @@ Add IP numbers manually in an array to block them.
 - [Languages](docs/languages.md).
 
 ## Changelog
+
+**0.5**
+
+- Fixed bug with create blacklist.
+- Removed the `go` feature again. It was the wrong approach.
 
 **0.4**
 

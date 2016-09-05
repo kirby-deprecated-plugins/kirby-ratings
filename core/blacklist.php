@@ -17,7 +17,7 @@ class Blacklist {
 	function createPage() {
 		if( ! $this->pageExists() ) {
 			try {
-				page()->create( $this->id . '/blacklist', 'blacklist', array(
+				page($this->id)->children()->create('blacklist', 'blacklist', array(
 					'title' => 'Blacklist',
 				));
 			} catch(Exception $e) {

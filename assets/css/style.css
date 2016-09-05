@@ -35,7 +35,8 @@
   padding: 12px;
   font-size: 16px;
   margin-top: 20px;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
   .ratings-success-close:hover {
     color: #fff; }
 

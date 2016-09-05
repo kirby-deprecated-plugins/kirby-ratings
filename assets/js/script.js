@@ -8,6 +8,7 @@ var kirbyRatings = (function () {
 			fn.form();
 			fn.submit();
 			fn.hover();
+			fn.close();
 
 			fn.url = url;
 		});
@@ -29,6 +30,12 @@ var kirbyRatings = (function () {
 	fn.outside = function() {
 		document.querySelector('.ratings-modal').addEventListener('click', function(e){
 			document.querySelector('.ratings-modal').classList.remove('ratings-modal-show');
+		});
+	};
+
+	fn.close = function() {
+		document.querySelector('.ratings-success-close').addEventListener('click', function(e){
+			location.reload();
 		});
 	};
 

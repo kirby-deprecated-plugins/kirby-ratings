@@ -1,6 +1,6 @@
 # Kirby Ratings
 
-*Version 0.2*
+*Version 0.3*
 
 Ratings stars - Allow users to vote for pages.
 
@@ -171,6 +171,13 @@ Add IP numbers manually in an array to block them.
 - [Languages](docs/languages.md).
 
 ## Changelog
+
+**0.3**
+
+- Cleaned up some unused functions.
+- If rating is not set no stars are displayed.
+- If rating is not set the average is `?` instead of 3.
+- Hidden in blueprint is now hidden in the panel. Bug fixed.
 
 **0.2**
 

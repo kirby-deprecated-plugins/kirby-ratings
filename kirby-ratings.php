@@ -1,9 +1,6 @@
 <?php
 // Include extensions
-include __DIR__ . DS . 'extensions' . DS . 'field-methods.php';
-include __DIR__ . DS . 'extensions' . DS . 'filters.php';
 include __DIR__ . DS . 'extensions' . DS . 'page-methods.php';
-include __DIR__ . DS . 'extensions' . DS . 'pages-methods.php';
 
 include __DIR__ . DS . 'core' . DS . 'vote.php';
 include __DIR__ . DS . 'core' . DS . 'blacklist.php';

@@ -8,7 +8,7 @@ Ratings stars - Allow users to vote for pages.
 - **Secret hidden** - code used to prevent simple spam attacks.
 - **Page methods** - Get rating average and rating count.
 - **Stars snippet** - Show the stars in 4 different sizes in the templates.
-- **`Multi language** - Including some common languages.
+- **Multi language** - Including some common languages.
 
 ![Screenshot](docs/screenshot1.png)
 

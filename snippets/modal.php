@@ -6,12 +6,14 @@ if( ! site()->languages() ) {
 } else {
 	new Ratings\LanguageSwitcherFrontendMultilang();
 }
+
+$go = ( ! empty( $go ) ) ? u() . '/' . $go : $page->url();
 ?>
 
 <div class="ratings-success">
 	<div class="ratings-success-message">
 		<?php echo l::get('plugin.ratings.success', 'You have voted!'); ?>
-		<a class="ratings-success-close" href="<?php echo $page->uri(); ?>">Stäng</a>
+		<a class="ratings-success-close" href="<?php echo $go; ?>">Stäng</a>
 	</div>
 </div>
 

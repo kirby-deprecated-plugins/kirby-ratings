@@ -13,12 +13,14 @@
 	background: rgba(0,0,0,.5);
 	font-size: 16px;
 	font-weight: bold;
+	font-family: arial;
 }
 .ratings-success-message {
 	background: #dff0d8;
 	padding: 20px;
 	border-radius: 4px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
 }
 
 .ratings-success-close {
@@ -96,7 +98,6 @@
 			}
 
 			.ratings-vote {
-				//display: none;
 				visibility: hidden;
 				font-size: 14px;
 				color: #888;
@@ -122,6 +123,7 @@
 				outline: none;
 				margin-top: 20px;
 				text-align: center;
+				box-sizing: border-box;
 			}
 		}
 	}

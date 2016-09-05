@@ -16,13 +16,15 @@
           justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   font-size: 16px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: arial; }
 
 .ratings-success-message {
   background: #dff0d8;
   padding: 20px;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box; }
 
 .ratings-success-close {
   background: rgba(255, 255, 255, 0.8);
@@ -112,7 +114,8 @@
         cursor: pointer;
         outline: none;
         margin-top: 20px;
-        text-align: center; }
+        text-align: center;
+        box-sizing: border-box; }
   .ratings-modal.ratings-modal-show {
     display: -webkit-box;
     display: -ms-flexbox;

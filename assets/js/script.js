@@ -14,13 +14,16 @@ var kirbyRatings = (function () {
 	};
 
 	fn.trigger = function() {
-		document.querySelector('.rating-trigger').addEventListener('click', function(e){
-			document.querySelector('.ratings-modal').classList.add('ratings-modal-show');
-			document.querySelector('.ratings-title').innerHTML = this.getAttribute('data-title');
+		var elements = document.querySelectorAll('.rating-trigger'), i;
+		for (i = 0; i < elements.length; ++i) {
+			elements[i].addEventListener('click', function(e){
+				document.querySelector('.ratings-modal').classList.add('ratings-modal-show');
+				document.querySelector('.ratings-title').innerHTML = this.getAttribute('data-title');
 
-			document.querySelector('.ratings-fields').setAttribute('data-id', this.getAttribute('data-id') );
-			document.querySelector('.ratings-fields').setAttribute('data-secret', fn.secret() );
-		});
+				document.querySelector('.ratings-fields').setAttribute('data-id', this.getAttribute('data-id') );
+				document.querySelector('.ratings-fields').setAttribute('data-secret', fn.secret() );
+			});
+		}
 	};
 
 	fn.outside = function() {

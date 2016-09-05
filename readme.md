@@ -1,6 +1,6 @@
 # Kirby Ratings
 
-*Version 0.3*
+*Version 0.4*
 
 Ratings stars - Allow users to vote for pages.
 
@@ -67,6 +67,16 @@ kirbyRatings.init('<?php echo u(); ?>');
 </script>
 ```
 
+**ratings-modal (optional)**
+
+You can also add a `go` argument if you don't want to go to the current page.
+
+```php
+<?php snippet('ratings-modal', array('go' => 'some/other/page')); ?>
+```
+
+To what page it should go after the rating has been added. If no value is set it will go to the page url.
+
 ## Usage
 
 ### Trigger
@@ -74,7 +84,7 @@ kirbyRatings.init('<?php echo u(); ?>');
 To trigger a rating modal you need something like this:
 
 ```php
-<div class="rating-trigger" data-id="about" data-title="About">Trigger</div>
+<div class="rating-trigger" data-id="<?php echo $page->id(); ?>" data-title="<?php echo $page->title(); ?>">Trigger</div>
 ```
 
 **rating-trigger**
@@ -171,6 +181,14 @@ Add IP numbers manually in an array to block them.
 - [Languages](docs/languages.md).
 
 ## Changelog
+
+**0.4**
+
+- Fixed bug in js. Not multiple triggers can be added on a single page.
+- Font added to success message.
+- Box sizing added to submit button.
+- Updated docs with minor things.
+- Added the optional `go` argument to the modal.
 
 **0.3**
 

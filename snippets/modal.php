@@ -1,3 +1,13 @@
+<?php
+use JensTornell\Ratings as Ratings;
+
+if( ! site()->languages() ) {
+	new Ratings\LanguageSwitcherFrontend();
+} else {
+	new Ratings\LanguageSwitcherFrontendMultilang();
+}
+?>
+
 <div class="ratings-success">
 	<div class="ratings-success-message">
 		<?php echo l::get('plugin.ratings.success', 'You have voted!'); ?>

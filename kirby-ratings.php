@@ -16,7 +16,9 @@ include __DIR__ . DS . 'routes.php';
 
 // Register fields
 $kirby->set('field',  'ratings', __DIR__ . DS . 'fields' . DS . 'ratings');
+$kirby->set('blueprint', 'fields/rating_hidden', __DIR__ . DS . 'blueprints' . DS  . 'fields' . DS . 'hidden.yml');
 
 // Register snippets
 $kirby->set('snippet', 'ratings-modal', __DIR__ . '/snippets/modal.php');
+$kirby->set('snippet', 'rating-panel-stars', __DIR__ . '/snippets/panel-stars.php');
 $kirby->set('snippet', 'rating-stars', __DIR__ . '/snippets/stars.php');

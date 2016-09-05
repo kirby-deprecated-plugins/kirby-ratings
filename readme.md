@@ -1,6 +1,6 @@
 # Kirby Ratings
 
-*Version 0.1*
+*Version 0.2*
 
 Ratings stars - Allow users to vote for pages.
 
@@ -8,6 +8,7 @@ Ratings stars - Allow users to vote for pages.
 - **Secret hidden** - code used to prevent simple spam attacks.
 - **Page methods** - Get rating average and rating count.
 - **Stars snippet** - Show the stars in 4 different sizes in the templates.
+- **`Multi language** - Including some common languages.
 
 ![Screenshot](docs/screenshot1.png)
 
@@ -60,7 +61,7 @@ Add the following code to your footer snippet:
 
 ```php
 <?php snippet('ratings-modal'); ?>
-<?php echo js('assets/plugins/kirby-ratings/js/script.js'); ?>
+<?php echo js('assets/plugins/kirby-ratings/js/script.min.js'); ?>
 <script>
 kirbyRatings.init('<?php echo u(); ?>');
 </script>
@@ -96,16 +97,11 @@ The five rating values stored in the content are counters. Just to be sure you c
 
 ```
 fields:
-  rating_1:
-    type: hidden
-  rating_2:
-    type: hidden
-  rating_3:
-    type: hidden
-  rating_4:
-    type: hidden
-  rating_5:
-    type: hidden
+  rating_1: rating_hidden
+  rating_2: rating_hidden
+  rating_3: rating_hidden
+  rating_4: rating_hidden
+  rating_5: rating_hidden
 ```
 
 **Rating in the panel (optional)**
@@ -159,7 +155,32 @@ The rating average like `3.52`.
 
 The number of votes like `48`.
 
+## Config
+
+```php
+c::set('plugin.ratings.blocked.ips', array());
+```
+
+**blocked.ips**
+
+Add IP numbers manually in an array to block them.
+
+## More reading
+
+- [Advanced](docs/advanced.md).
+- [Languages](docs/languages.md).
+
 ## Changelog
+
+**0.2**
+
+- Config to manually block IP numbers in an array.
+- Added frensh translation. Thanks to [Mathieu Etienne](https://github.com/Thiousi) for that.
+- Added forgotten translation keys to the `en` and `sv` translations.
+- Added support for multi language setup.
+- Added global blueprint field definitions to make the blueprint shorter.
+- Minified frontend js and included the gulpfile.js.
+- Separated stars snippets into a panel snippet and a frontend snippet.
 
 **0.1**
 
@@ -180,3 +201,4 @@ This plugin is provided "as is" with no guarantee. Use it at your own risk and a
 ## Credits
 
 - [Jens Törnell](https://github.com/jenstornell)
+- [Mathieu Etienne](https://github.com/Thiousi)

@@ -10,6 +10,14 @@ kirby()->routes(array(
 			$post['value'] = get('value');
 			$post['secret'] = get('secret');
 
+			if( ! site()->languages() ) {
+				new Ratings\LanguageSwitcherFrontend();
+			} else {
+				new Ratings\LanguageSwitcherFrontendMultilang();
+			}
+
+
+			Ratings\isValidIP( $post );
 			Ratings\canVote( $post );
 			Ratings\isHuman( $post );
 			Ratings\isRating( $post );

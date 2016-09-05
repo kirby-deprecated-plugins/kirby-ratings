@@ -3,6 +3,7 @@ namespace JensTornell\Ratings;
 use JensTornell\Ratings as Ratings;
 use f;
 use visitor;
+use l;
 
 class LanguageSwitcherPanel {
 	function __construct() {
@@ -33,8 +34,21 @@ class LanguageSwitcherFrontend {
 	}
 }
 
+class LanguageSwitcherFrontendMultilang {
+	function __construct() {
+		$this->folderpath = kirby()->roots()->plugins() . DS . 'kirby-ratings' . DS . 'languages';
+		$this->filepath = $this->folderpath . DS . (string)site()->language() . '.php';
+
+		$this->defaultFilepath = $this->folderpath . DS . 'en.php';
+
+		if( f::exists( $this->filepath ) ) {
+			require_once $this->filepath;
+		} else {
+			require_once $this->defaultFilepath;
+		}
+	}
+}
+
 if( function_exists('panel') && site()->user() ) {
 	new Ratings\LanguageSwitcherPanel();
-} else {
-	new Ratings\LanguageSwitcherFrontend();
 }
